@@ -11,6 +11,12 @@
 		ED100D5C2A03E7830006B857 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D5B2A03E7830006B857 /* ContentView.swift */; };
 		ED100D5E2A03E7870006B857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED100D5D2A03E7870006B857 /* Assets.xcassets */; };
 		ED100D612A03E7870006B857 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED100D602A03E7870006B857 /* Preview Assets.xcassets */; };
+		ED100D6A2A03EC6B0006B857 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D692A03EC6B0006B857 /* SensorListView.swift */; };
+		ED100D6D2A03ECD50006B857 /* SensorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D6C2A03ECD50006B857 /* SensorCellView.swift */; };
+		ED100D6F2A03F22D0006B857 /* SensorDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D6E2A03F22D0006B857 /* SensorDetailsView.swift */; };
+		ED100D732A03F30B0006B857 /* SensorDetailsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */; };
+		ED100D762A0431100006B857 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D752A0431100006B857 /* View+Extensions.swift */; };
+		ED100D782A0431A60006B857 /* SensorDetailsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		ED100D5B2A03E7830006B857 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED100D5D2A03E7870006B857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED100D602A03E7870006B857 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED100D692A03EC6B0006B857 /* SensorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListView.swift; sourceTree = "<group>"; };
+		ED100D6C2A03ECD50006B857 /* SensorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCellView.swift; sourceTree = "<group>"; };
+		ED100D6E2A03F22D0006B857 /* SensorDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsView.swift; sourceTree = "<group>"; };
+		ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsCellView.swift; sourceTree = "<group>"; };
+		ED100D752A0431100006B857 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,9 @@
 		ED100D582A03E7830006B857 /* SnsrViewer */ = {
 			isa = PBXGroup;
 			children = (
+				ED100D742A0431020006B857 /* Utils */,
+				ED100D682A03E9DA0006B857 /* SensorDetails */,
+				ED100D672A03E9B60006B857 /* SensorList */,
 				ED100D592A03E7830006B857 /* SnsrViewerApp.swift */,
 				ED100D5B2A03E7830006B857 /* ContentView.swift */,
 				ED100D5D2A03E7870006B857 /* Assets.xcassets */,
@@ -65,6 +80,57 @@
 				ED100D602A03E7870006B857 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED100D672A03E9B60006B857 /* SensorList */ = {
+			isa = PBXGroup;
+			children = (
+				ED100D6B2A03ECBC0006B857 /* SensorCell */,
+				ED100D692A03EC6B0006B857 /* SensorListView.swift */,
+			);
+			path = SensorList;
+			sourceTree = "<group>";
+		};
+		ED100D682A03E9DA0006B857 /* SensorDetails */ = {
+			isa = PBXGroup;
+			children = (
+				ED100D792A0432BD0006B857 /* SensorDetailsChart */,
+				ED100D702A03F2F30006B857 /* SensorDetailsCell */,
+				ED100D6E2A03F22D0006B857 /* SensorDetailsView.swift */,
+			);
+			path = SensorDetails;
+			sourceTree = "<group>";
+		};
+		ED100D6B2A03ECBC0006B857 /* SensorCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED100D6C2A03ECD50006B857 /* SensorCellView.swift */,
+			);
+			path = SensorCell;
+			sourceTree = "<group>";
+		};
+		ED100D702A03F2F30006B857 /* SensorDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */,
+			);
+			path = SensorDetailsCell;
+			sourceTree = "<group>";
+		};
+		ED100D742A0431020006B857 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED100D752A0431100006B857 /* View+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ED100D792A0432BD0006B857 /* SensorDetailsChart */ = {
+			isa = PBXGroup;
+			children = (
+				ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */,
+			);
+			path = SensorDetailsChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED100D6D2A03ECD50006B857 /* SensorCellView.swift in Sources */,
 				ED100D5C2A03E7830006B857 /* ContentView.swift in Sources */,
 				ED100D5A2A03E7830006B857 /* SnsrViewerApp.swift in Sources */,
+				ED100D762A0431100006B857 /* View+Extensions.swift in Sources */,
+				ED100D782A0431A60006B857 /* SensorDetailsChartView.swift in Sources */,
+				ED100D6A2A03EC6B0006B857 /* SensorListView.swift in Sources */,
+				ED100D6F2A03F22D0006B857 /* SensorDetailsView.swift in Sources */,
+				ED100D732A03F30B0006B857 /* SensorDetailsCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
