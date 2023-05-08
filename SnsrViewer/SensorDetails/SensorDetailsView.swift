@@ -8,17 +8,17 @@
 import SwiftUI
 import Charts
 
-struct Amount: Identifiable {
-    var month: String
-    var amount: Double
-    var id = UUID()
-}
-
 struct SensorDetailsView: View {
+    private let model: SensorListStore.Device
+    
+    init(model: SensorListStore.Device) {
+        self.model = model
+    }
+    
     var body: some View {
         VStack {
             SensorDetailsCellView()
-            SensorDetailsChartView()
+            SensorDetailsChartView(device: model)
         }
         .backplateBackground()
     }
@@ -26,7 +26,7 @@ struct SensorDetailsView: View {
 
 struct SensorDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorDetailsView()
+        EmptyView()
     }
 }
 

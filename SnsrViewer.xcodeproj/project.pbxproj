@@ -17,6 +17,16 @@
 		ED100D732A03F30B0006B857 /* SensorDetailsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */; };
 		ED100D762A0431100006B857 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D752A0431100006B857 /* View+Extensions.swift */; };
 		ED100D782A0431A60006B857 /* SensorDetailsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */; };
+		ED100D7C2A097ADA0006B857 /* SnsrWebApi in Frameworks */ = {isa = PBXBuildFile; productRef = ED100D7B2A097ADA0006B857 /* SnsrWebApi */; };
+		ED100D7E2A097B060006B857 /* SensorListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D7D2A097B060006B857 /* SensorListStore.swift */; };
+		ED100D802A097C1A0006B857 /* SensorListActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D7F2A097C1A0006B857 /* SensorListActionCreator.swift */; };
+		ED100D832A0980020006B857 /* SWAPICore in Frameworks */ = {isa = PBXBuildFile; productRef = ED100D822A0980020006B857 /* SWAPICore */; };
+		ED100D852A09805D0006B857 /* AppDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D842A09805D0006B857 /* AppDispatcher.swift */; };
+		ED100D872A0987320006B857 /* SensorCellStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D862A0987320006B857 /* SensorCellStore.swift */; };
+		ED100D892A098BEE0006B857 /* SensorDetailsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D882A098BEE0006B857 /* SensorDetailsStore.swift */; };
+		ED100D8B2A098E330006B857 /* SensorDetailsChartStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8A2A098E330006B857 /* SensorDetailsChartStore.swift */; };
+		ED100D8D2A09925E0006B857 /* SensorDetailsActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8C2A09925E0006B857 /* SensorDetailsActionCreator.swift */; };
+		ED100D8F2A0995CE0006B857 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8E2A0995CE0006B857 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +41,15 @@
 		ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsCellView.swift; sourceTree = "<group>"; };
 		ED100D752A0431100006B857 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsChartView.swift; sourceTree = "<group>"; };
+		ED100D7D2A097B060006B857 /* SensorListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListStore.swift; sourceTree = "<group>"; };
+		ED100D7F2A097C1A0006B857 /* SensorListActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListActionCreator.swift; sourceTree = "<group>"; };
+		ED100D842A09805D0006B857 /* AppDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDispatcher.swift; sourceTree = "<group>"; };
+		ED100D862A0987320006B857 /* SensorCellStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCellStore.swift; sourceTree = "<group>"; };
+		ED100D882A098BEE0006B857 /* SensorDetailsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsStore.swift; sourceTree = "<group>"; };
+		ED100D8A2A098E330006B857 /* SensorDetailsChartStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsChartStore.swift; sourceTree = "<group>"; };
+		ED100D8C2A09925E0006B857 /* SensorDetailsActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsActionCreator.swift; sourceTree = "<group>"; };
+		ED100D8E2A0995CE0006B857 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		ED100D912A09AA740006B857 /* SnsrWebApi */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SnsrWebApi; path = ../SnsrWebApi; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED100D832A0980020006B857 /* SWAPICore in Frameworks */,
+				ED100D7C2A097ADA0006B857 /* SnsrWebApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +68,7 @@
 		ED100D4D2A03E7830006B857 = {
 			isa = PBXGroup;
 			children = (
+				ED100D912A09AA740006B857 /* SnsrWebApi */,
 				ED100D582A03E7830006B857 /* SnsrViewer */,
 				ED100D572A03E7830006B857 /* Products */,
 			);
@@ -70,6 +92,7 @@
 				ED100D5B2A03E7830006B857 /* ContentView.swift */,
 				ED100D5D2A03E7870006B857 /* Assets.xcassets */,
 				ED100D5F2A03E7870006B857 /* Preview Content */,
+				ED100D842A09805D0006B857 /* AppDispatcher.swift */,
 			);
 			path = SnsrViewer;
 			sourceTree = "<group>";
@@ -87,6 +110,8 @@
 			children = (
 				ED100D6B2A03ECBC0006B857 /* SensorCell */,
 				ED100D692A03EC6B0006B857 /* SensorListView.swift */,
+				ED100D7D2A097B060006B857 /* SensorListStore.swift */,
+				ED100D7F2A097C1A0006B857 /* SensorListActionCreator.swift */,
 			);
 			path = SensorList;
 			sourceTree = "<group>";
@@ -97,6 +122,7 @@
 				ED100D792A0432BD0006B857 /* SensorDetailsChart */,
 				ED100D702A03F2F30006B857 /* SensorDetailsCell */,
 				ED100D6E2A03F22D0006B857 /* SensorDetailsView.swift */,
+				ED100D882A098BEE0006B857 /* SensorDetailsStore.swift */,
 			);
 			path = SensorDetails;
 			sourceTree = "<group>";
@@ -105,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				ED100D6C2A03ECD50006B857 /* SensorCellView.swift */,
+				ED100D862A0987320006B857 /* SensorCellStore.swift */,
 			);
 			path = SensorCell;
 			sourceTree = "<group>";
@@ -121,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				ED100D752A0431100006B857 /* View+Extensions.swift */,
+				ED100D8E2A0995CE0006B857 /* Date+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -129,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */,
+				ED100D8A2A098E330006B857 /* SensorDetailsChartStore.swift */,
+				ED100D8C2A09925E0006B857 /* SensorDetailsActionCreator.swift */,
 			);
 			path = SensorDetailsChart;
 			sourceTree = "<group>";
@@ -149,6 +179,10 @@
 			dependencies = (
 			);
 			name = SnsrViewer;
+			packageProductDependencies = (
+				ED100D7B2A097ADA0006B857 /* SnsrWebApi */,
+				ED100D822A0980020006B857 /* SWAPICore */,
+			);
 			productName = SnsrViewer;
 			productReference = ED100D562A03E7830006B857 /* SnsrViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +211,10 @@
 				Base,
 			);
 			mainGroup = ED100D4D2A03E7830006B857;
+			packageReferences = (
+				ED100D7A2A097ADA0006B857 /* XCRemoteSwiftPackageReference "SnsrWebApi" */,
+				ED100D812A0980020006B857 /* XCRemoteSwiftPackageReference "SWAPICore" */,
+			);
 			productRefGroup = ED100D572A03E7830006B857 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,13 +242,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED100D6D2A03ECD50006B857 /* SensorCellView.swift in Sources */,
+				ED100D8D2A09925E0006B857 /* SensorDetailsActionCreator.swift in Sources */,
 				ED100D5C2A03E7830006B857 /* ContentView.swift in Sources */,
 				ED100D5A2A03E7830006B857 /* SnsrViewerApp.swift in Sources */,
 				ED100D762A0431100006B857 /* View+Extensions.swift in Sources */,
 				ED100D782A0431A60006B857 /* SensorDetailsChartView.swift in Sources */,
+				ED100D8B2A098E330006B857 /* SensorDetailsChartStore.swift in Sources */,
+				ED100D7E2A097B060006B857 /* SensorListStore.swift in Sources */,
 				ED100D6A2A03EC6B0006B857 /* SensorListView.swift in Sources */,
+				ED100D8F2A0995CE0006B857 /* Date+Extensions.swift in Sources */,
+				ED100D872A0987320006B857 /* SensorCellStore.swift in Sources */,
 				ED100D6F2A03F22D0006B857 /* SensorDetailsView.swift in Sources */,
+				ED100D802A097C1A0006B857 /* SensorListActionCreator.swift in Sources */,
+				ED100D892A098BEE0006B857 /* SensorDetailsStore.swift in Sources */,
 				ED100D732A03F30B0006B857 /* SensorDetailsCellView.swift in Sources */,
+				ED100D852A09805D0006B857 /* AppDispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +457,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED100D7A2A097ADA0006B857 /* XCRemoteSwiftPackageReference "SnsrWebApi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mivafoxy/SnsrWebApi.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		ED100D812A0980020006B857 /* XCRemoteSwiftPackageReference "SWAPICore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mivafoxy/SWAPICore.git";
+			requirement = {
+				branch = FourthHomework;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED100D7B2A097ADA0006B857 /* SnsrWebApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED100D7A2A097ADA0006B857 /* XCRemoteSwiftPackageReference "SnsrWebApi" */;
+			productName = SnsrWebApi;
+		};
+		ED100D822A0980020006B857 /* SWAPICore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED100D812A0980020006B857 /* XCRemoteSwiftPackageReference "SWAPICore" */;
+			productName = SWAPICore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED100D4E2A03E7830006B857 /* Project object */;
 }

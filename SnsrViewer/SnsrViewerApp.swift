@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SWAPICore
 
 @main
 struct SnsrViewerApp: App {
@@ -13,5 +14,20 @@ struct SnsrViewerApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+}
+
+final class Configurator {
+    static let shared = Configurator()
+    
+    private init() {}
+    
+    func setup() {
+        setupAppDispatcher()
+    }
+    
+    private func setupAppDispatcher() {
+        let appDispatcher: FluxDispatcher = AppDispatcher()
+        ServiceLocator.shared.addService(service: appDispatcher)
     }
 }

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        Configurator.shared.setup()
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {

@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct SensorListView: View {
+    // MARK: - Properties
+    @ObservedObject private var store: SensorListStore = SensorListStore()
+    private var actionCreator: SensorListActionCreator = SensorListActionCreator()
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: gridItemLayout) {
-                ForEach((0...1), id: \.self) { _ in
+                ForEach(store.models, id: \.id) { model in
                     NavigationLink(
                         destination: {
-                        SensorDetailsView()
+                        SensorDetailsView(model: model)
                     }, label: {
-                        SensorCellView()
+                        SensorCellView(model: model)
                     })
                 }
             }
+        }
+        .onAppear {
+            actionCreator.getDevices()
         }
     }
 }
