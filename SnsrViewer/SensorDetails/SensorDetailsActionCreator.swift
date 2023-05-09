@@ -26,12 +26,12 @@ final class SensorDetailsActionCreator {
                 switch response.result {
                 case .success(let responseValue):
                     if let value = responseValue.success {
-                        self?.dispatcher?.dispatch(action: SensorDetailsChartStore.Actions.loaded(value: value))
+                        self?.dispatcher?.dispatch(action: SensorDetailsStore.Actions.loaded(value: value))
                     } else {
-                        self?.dispatcher?.dispatch(action: SensorDetailsChartStore.Actions.error)
+                        self?.dispatcher?.dispatch(action: SensorDetailsStore.Actions.error)
                     }
                 case .failure:
-                    self?.dispatcher?.dispatch(action: SensorDetailsChartStore.Actions.error)
+                    self?.dispatcher?.dispatch(action: SensorDetailsStore.Actions.error)
                 }
             }
     }

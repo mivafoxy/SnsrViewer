@@ -14,19 +14,18 @@
 		ED100D6A2A03EC6B0006B857 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D692A03EC6B0006B857 /* SensorListView.swift */; };
 		ED100D6D2A03ECD50006B857 /* SensorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D6C2A03ECD50006B857 /* SensorCellView.swift */; };
 		ED100D6F2A03F22D0006B857 /* SensorDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D6E2A03F22D0006B857 /* SensorDetailsView.swift */; };
-		ED100D732A03F30B0006B857 /* SensorDetailsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */; };
 		ED100D762A0431100006B857 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D752A0431100006B857 /* View+Extensions.swift */; };
-		ED100D782A0431A60006B857 /* SensorDetailsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */; };
 		ED100D7C2A097ADA0006B857 /* SnsrWebApi in Frameworks */ = {isa = PBXBuildFile; productRef = ED100D7B2A097ADA0006B857 /* SnsrWebApi */; };
 		ED100D7E2A097B060006B857 /* SensorListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D7D2A097B060006B857 /* SensorListStore.swift */; };
 		ED100D802A097C1A0006B857 /* SensorListActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D7F2A097C1A0006B857 /* SensorListActionCreator.swift */; };
 		ED100D832A0980020006B857 /* SWAPICore in Frameworks */ = {isa = PBXBuildFile; productRef = ED100D822A0980020006B857 /* SWAPICore */; };
 		ED100D852A09805D0006B857 /* AppDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D842A09805D0006B857 /* AppDispatcher.swift */; };
 		ED100D872A0987320006B857 /* SensorCellStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D862A0987320006B857 /* SensorCellStore.swift */; };
-		ED100D892A098BEE0006B857 /* SensorDetailsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D882A098BEE0006B857 /* SensorDetailsStore.swift */; };
-		ED100D8B2A098E330006B857 /* SensorDetailsChartStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8A2A098E330006B857 /* SensorDetailsChartStore.swift */; };
+		ED100D8B2A098E330006B857 /* SensorDetailsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8A2A098E330006B857 /* SensorDetailsStore.swift */; };
 		ED100D8D2A09925E0006B857 /* SensorDetailsActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8C2A09925E0006B857 /* SensorDetailsActionCreator.swift */; };
 		ED100D8F2A0995CE0006B857 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8E2A0995CE0006B857 /* Date+Extensions.swift */; };
+		ED100D932A0A53AC0006B857 /* RoundedRectangle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D922A0A53AC0006B857 /* RoundedRectangle+Extensions.swift */; };
+		ED100D962A0A54C30006B857 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D952A0A54C30006B857 /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,18 +37,17 @@
 		ED100D692A03EC6B0006B857 /* SensorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListView.swift; sourceTree = "<group>"; };
 		ED100D6C2A03ECD50006B857 /* SensorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCellView.swift; sourceTree = "<group>"; };
 		ED100D6E2A03F22D0006B857 /* SensorDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsView.swift; sourceTree = "<group>"; };
-		ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsCellView.swift; sourceTree = "<group>"; };
 		ED100D752A0431100006B857 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsChartView.swift; sourceTree = "<group>"; };
 		ED100D7D2A097B060006B857 /* SensorListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListStore.swift; sourceTree = "<group>"; };
 		ED100D7F2A097C1A0006B857 /* SensorListActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListActionCreator.swift; sourceTree = "<group>"; };
 		ED100D842A09805D0006B857 /* AppDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDispatcher.swift; sourceTree = "<group>"; };
 		ED100D862A0987320006B857 /* SensorCellStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCellStore.swift; sourceTree = "<group>"; };
-		ED100D882A098BEE0006B857 /* SensorDetailsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsStore.swift; sourceTree = "<group>"; };
-		ED100D8A2A098E330006B857 /* SensorDetailsChartStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsChartStore.swift; sourceTree = "<group>"; };
+		ED100D8A2A098E330006B857 /* SensorDetailsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsStore.swift; sourceTree = "<group>"; };
 		ED100D8C2A09925E0006B857 /* SensorDetailsActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsActionCreator.swift; sourceTree = "<group>"; };
 		ED100D8E2A0995CE0006B857 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		ED100D912A09AA740006B857 /* SnsrWebApi */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SnsrWebApi; path = ../SnsrWebApi; sourceTree = "<group>"; };
+		ED100D922A0A53AC0006B857 /* RoundedRectangle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoundedRectangle+Extensions.swift"; sourceTree = "<group>"; };
+		ED100D952A0A54C30006B857 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +83,7 @@
 		ED100D582A03E7830006B857 /* SnsrViewer */ = {
 			isa = PBXGroup;
 			children = (
+				ED100D942A0A54B70006B857 /* Shared */,
 				ED100D742A0431020006B857 /* Utils */,
 				ED100D682A03E9DA0006B857 /* SensorDetails */,
 				ED100D672A03E9B60006B857 /* SensorList */,
@@ -119,10 +118,9 @@
 		ED100D682A03E9DA0006B857 /* SensorDetails */ = {
 			isa = PBXGroup;
 			children = (
-				ED100D792A0432BD0006B857 /* SensorDetailsChart */,
-				ED100D702A03F2F30006B857 /* SensorDetailsCell */,
+				ED100D8A2A098E330006B857 /* SensorDetailsStore.swift */,
+				ED100D8C2A09925E0006B857 /* SensorDetailsActionCreator.swift */,
 				ED100D6E2A03F22D0006B857 /* SensorDetailsView.swift */,
-				ED100D882A098BEE0006B857 /* SensorDetailsStore.swift */,
 			);
 			path = SensorDetails;
 			sourceTree = "<group>";
@@ -136,31 +134,22 @@
 			path = SensorCell;
 			sourceTree = "<group>";
 		};
-		ED100D702A03F2F30006B857 /* SensorDetailsCell */ = {
-			isa = PBXGroup;
-			children = (
-				ED100D722A03F30B0006B857 /* SensorDetailsCellView.swift */,
-			);
-			path = SensorDetailsCell;
-			sourceTree = "<group>";
-		};
 		ED100D742A0431020006B857 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				ED100D752A0431100006B857 /* View+Extensions.swift */,
 				ED100D8E2A0995CE0006B857 /* Date+Extensions.swift */,
+				ED100D922A0A53AC0006B857 /* RoundedRectangle+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		ED100D792A0432BD0006B857 /* SensorDetailsChart */ = {
+		ED100D942A0A54B70006B857 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				ED100D772A0431A60006B857 /* SensorDetailsChartView.swift */,
-				ED100D8A2A098E330006B857 /* SensorDetailsChartStore.swift */,
-				ED100D8C2A09925E0006B857 /* SensorDetailsActionCreator.swift */,
+				ED100D952A0A54C30006B857 /* ViewState.swift */,
 			);
-			path = SensorDetailsChart;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,19 +232,18 @@
 			files = (
 				ED100D6D2A03ECD50006B857 /* SensorCellView.swift in Sources */,
 				ED100D8D2A09925E0006B857 /* SensorDetailsActionCreator.swift in Sources */,
+				ED100D962A0A54C30006B857 /* ViewState.swift in Sources */,
+				ED100D932A0A53AC0006B857 /* RoundedRectangle+Extensions.swift in Sources */,
 				ED100D5C2A03E7830006B857 /* ContentView.swift in Sources */,
 				ED100D5A2A03E7830006B857 /* SnsrViewerApp.swift in Sources */,
 				ED100D762A0431100006B857 /* View+Extensions.swift in Sources */,
-				ED100D782A0431A60006B857 /* SensorDetailsChartView.swift in Sources */,
-				ED100D8B2A098E330006B857 /* SensorDetailsChartStore.swift in Sources */,
+				ED100D8B2A098E330006B857 /* SensorDetailsStore.swift in Sources */,
 				ED100D7E2A097B060006B857 /* SensorListStore.swift in Sources */,
 				ED100D6A2A03EC6B0006B857 /* SensorListView.swift in Sources */,
 				ED100D8F2A0995CE0006B857 /* Date+Extensions.swift in Sources */,
 				ED100D872A0987320006B857 /* SensorCellStore.swift in Sources */,
 				ED100D6F2A03F22D0006B857 /* SensorDetailsView.swift in Sources */,
 				ED100D802A097C1A0006B857 /* SensorListActionCreator.swift in Sources */,
-				ED100D892A098BEE0006B857 /* SensorDetailsStore.swift in Sources */,
-				ED100D732A03F30B0006B857 /* SensorDetailsCellView.swift in Sources */,
 				ED100D852A09805D0006B857 /* AppDispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

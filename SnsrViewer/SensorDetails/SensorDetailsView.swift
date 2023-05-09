@@ -9,18 +9,16 @@ import SwiftUI
 import Charts
 
 struct SensorDetailsView: View {
-    private let model: SensorListStore.Device
+    @ObservedObject private var store: SensorDetailsStore
     
     init(model: SensorListStore.Device) {
-        self.model = model
+        store = SensorDetailsStore(device: model)
     }
     
     var body: some View {
         VStack {
-            SensorDetailsCellView()
-            SensorDetailsChartView(device: model)
+            
         }
-        .backplateBackground()
     }
 }
 

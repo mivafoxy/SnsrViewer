@@ -18,11 +18,12 @@ final class SensorListStore: ObservableObject {
     
     enum SensorAction: FluxAction {
         case loaded(devices: [DeviceModel])
-        case error
+        case loadedFromCache(devices: [Device])
+        case error(ErrorType)
     }
     
-    struct Device: Identifiable {
-        let id = UUID()
+    struct Device: Identifiable, Codable {
+        let id: UUID
         let modelName: String
         let modelType: Int
         let modelUuid: String
@@ -46,6 +47,7 @@ final class SensorListStore: ObservableObject {
             self.modelType = modelType
             self.modelUuid = modelUuid
             self.serial = serial
+            self.id = UUID()
         }
     }
     
@@ -53,6 +55,7 @@ final class SensorListStore: ObservableObject {
     
     @Injected private var dispatcher: FluxDispatcher?
     @Published private(set) var models: [Device] = []
+    @Published private(set) var viewState = ViewState.idle
     
     // MARK: - Init
     
@@ -66,16 +69,25 @@ extension SensorListStore: FluxStore {
     func onDispatch(with action: FluxAction) {
         guard let action = action as? SensorAction else { return }
         
-        switch action {
-        case .loaded(let devices):
-            onRecieve(devices)
-        case .error:
-            // TODO: - show error and try to load cache
-            return
+        DispatchQueue.main.async {
+            switch action {
+            case .loaded(let devices):
+                self.onRecieve(devices)
+            case .loadedFromCache(let devices):
+                self.viewState = .cached
+                self.models = devices
+            case .error(let errorType):
+                self.viewState = .error(errorType: errorType)
+            }
         }
     }
     
     private func onRecieve(_ devices: [DeviceModel]) {
+        guard !devices.isEmpty else {
+            viewState = .emptyResult
+            return
+        }
+        
         models = devices.compactMap { device in
             if SensorType(rawValue: device.deviceModelType ?? -1) == SensorType.WaterSensor {
                 return Device(modelName: device.deviceModelName,
@@ -86,5 +98,7 @@ extension SensorListStore: FluxStore {
                 return nil
             }
         }
+        
+        viewState = models.isEmpty ? .emptyResult : .finished
     }
 }

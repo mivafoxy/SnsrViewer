@@ -29,10 +29,10 @@ struct SensorCellView: View {
                         .frame(maxWidth: 50, maxHeight: 50)
                     Text(store.model.modelName)
                         .foregroundColor(.black)
+                    Text(store.model.serial)
+                        .foregroundColor(.black)
                 }
             }
-            Text(store.model.serial)
-                .foregroundColor(.black)
         }
     }
 }
