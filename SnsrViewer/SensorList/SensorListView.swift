@@ -94,9 +94,6 @@ extension SensorListView {
                     Image(systemName: "arrow.clockwise.circle.fill")
                         .resizable()
                         .frame(width: 100, height: 100)
-                        .onTapGesture {
-                            actionCreator.getDevices()
-                        }
                 }
                 
                 Text("Нажмите, чтобы обновить")

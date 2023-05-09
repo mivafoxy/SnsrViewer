@@ -9,15 +9,21 @@ import SwiftUI
 import SnsrWebApi
 import SWAPICore
 
+enum SensorValueType: Int {
+    case coldWater = 3
+    case hotWater = 4
+}
+
 final class SensorDetailsStore: ObservableObject {
     // MARK: - Types
     
     enum Actions: FluxAction {
         case loaded(value: ObjectValueModel)
-        case error
+        case loadedFromCache(value: SensorDetailsModel)
+        case error(ErrorType)
     }
     
-    struct SensorDetailsModel {
+    struct SensorDetailsModel: Codable {
         let objectId: Int
         let receiveTime: Date
         let value: Double
@@ -45,8 +51,10 @@ final class SensorDetailsStore: ObservableObject {
     
     // MARK: - Properties
     @Injected private var dispatcher: FluxDispatcher?
-    @Published private(set) var model: SensorDetailsModel?
+    @Published private(set) var coldWaterModel: SensorDetailsModel?
+    @Published private(set) var howWaterModel: SensorDetailsModel?
     @Published private(set) var device: SensorListStore.Device
+    @Published private(set) var viewState: ViewState = .idle
     
     // MARK: - Init
     init(device: SensorListStore.Device) {
@@ -60,19 +68,39 @@ extension SensorDetailsStore: FluxStore {
     func onDispatch(with action: FluxAction) {
         guard let action = action as? Actions else { return }
         
-        switch action {
-        case .loaded(let values):
-            onReceive(values)
-        case .error:
-            // TODO: - error handling
-            return
+        DispatchQueue.main.async {
+            switch action {
+            case .loaded(let value):
+                self.onReceive(value)
+            case .error(let errorType):
+                self.viewState = .error(errorType: errorType)
+            case .loadedFromCache(let value):
+                self.onReceiveFromCache(value)
+            }
         }
     }
     
     private func onReceive(_ value: ObjectValueModel) {
-        model = SensorDetailsModel(objectId: value.objectId,
-                                   receiveTime: value.objectReceiveTime,
-                                   value: value.objectValue)
+        if value.objectId == SensorValueType.coldWater.rawValue {
+            coldWaterModel = SensorDetailsModel(objectId: value.objectId,
+                                                receiveTime: value.objectReceiveTime,
+                                                value: value.objectValue)
+        } else if value.objectId == SensorValueType.hotWater.rawValue {
+            howWaterModel = SensorDetailsModel(objectId: value.objectId,
+                                               receiveTime: value.objectReceiveTime,
+                                               value: value.objectValue)
+        }
         
+        viewState = .finished
+    }
+    
+    private func onReceiveFromCache(_ value: SensorDetailsModel) {
+        if value.objectId == SensorValueType.hotWater.rawValue {
+            howWaterModel = value
+        } else if value.objectId == SensorValueType.coldWater.rawValue {
+            coldWaterModel = value
+        }
+        
+        viewState = .cached
     }
 }
