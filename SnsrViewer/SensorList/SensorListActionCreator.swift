@@ -13,6 +13,7 @@ final class SensorListActionCreator {
     // MARK: - Properties
     
     @Injected private var dispatcher: FluxDispatcher?
+    @Injected private var cacheService: CacheServiceProtocol?
     private let cacheFileName: String = "SensorListCache"
     
     // MARK: - Actions
@@ -40,60 +41,25 @@ final class SensorListActionCreator {
     }
     
     func getCachedDevices() async throws {
-        let task = Task<[SensorListStore.Device]?, Error> { [weak self] in
-            guard let fileURL = try self?.fileURL() else {
-                self?.dispatcher?
-                    .dispatch(
-                        action: SensorListStore.SensorAction
-                            .error(.emptyCache))
-                return nil
+        try await cacheService?
+            .loadFromCache(fileName: cacheFileName
+            ) { [weak self] (result: CacheResult<[SensorListStore.Device]>) in
+                switch result {
+                case .successLoad(let devices):
+                    self?.dispatcher?
+                        .dispatch(
+                            action: SensorListStore.SensorAction
+                                .loadedFromCache(devices: devices))
+                case .failure:
+                    self?.dispatcher?
+                        .dispatch(
+                            action: SensorListStore.SensorAction
+                                .error(.emptyCache))
+                }
             }
-            
-            guard let data = try? Data(contentsOf: fileURL) else {
-                self?.dispatcher?
-                    .dispatch(
-                        action: SensorListStore.SensorAction
-                            .error(.emptyCache))
-                return nil
-            }
-            
-            let devices = try JSONDecoder()
-                .decode([SensorListStore.Device].self,
-                        from: data)
-            
-            return devices
-        }
-        
-        guard let devices = try await task.value else {
-            self.dispatcher?
-                .dispatch(
-                    action: SensorListStore.SensorAction
-                        .error(.emptyCache))
-            return
-        }
-        
-        dispatcher?.dispatch(
-            action: SensorListStore.SensorAction
-                .loadedFromCache(devices: devices))
     }
     
     func saveDevicesToCache(devices: [SensorListStore.Device]) async throws {
-        let task = Task {
-            let data = try JSONEncoder().encode(devices)
-            let outfile = try fileURL()
-            try data.write(to: outfile)
-        }
-        
-        _ = try await task.value
-    }
-    
-    func fileURL() throws -> URL {
-        return try FileManager
-            .default
-            .url(for: .documentDirectory,
-                 in: .userDomainMask,
-                 appropriateFor: nil,
-                 create: false)
-            .appendingPathComponent("\(cacheFileName).data")
+        try await cacheService?.saveToCache(data: devices, fileName: cacheFileName)
     }
 }

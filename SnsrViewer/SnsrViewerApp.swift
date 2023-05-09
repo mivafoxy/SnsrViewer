@@ -24,10 +24,16 @@ final class Configurator {
     
     func setup() {
         setupAppDispatcher()
+        setupCacheService()
     }
     
     private func setupAppDispatcher() {
         let appDispatcher: FluxDispatcher = AppDispatcher()
         ServiceLocator.shared.addService(service: appDispatcher)
+    }
+    
+    private func setupCacheService() {
+        let cacheService: CacheServiceProtocol = FileCacheService()
+        ServiceLocator.shared.addService(service: cacheService)
     }
 }

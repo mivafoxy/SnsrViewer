@@ -35,4 +35,8 @@ final class SensorDetailsActionCreator {
                 }
             }
     }
+    
+    func saveValueToCache() {
+        
+    }
 }

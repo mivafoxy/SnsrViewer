@@ -26,6 +26,7 @@
 		ED100D8F2A0995CE0006B857 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D8E2A0995CE0006B857 /* Date+Extensions.swift */; };
 		ED100D932A0A53AC0006B857 /* RoundedRectangle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D922A0A53AC0006B857 /* RoundedRectangle+Extensions.swift */; };
 		ED100D962A0A54C30006B857 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D952A0A54C30006B857 /* ViewState.swift */; };
+		ED100D982A0A68C80006B857 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED100D972A0A68C80006B857 /* CacheService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		ED100D912A09AA740006B857 /* SnsrWebApi */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SnsrWebApi; path = ../SnsrWebApi; sourceTree = "<group>"; };
 		ED100D922A0A53AC0006B857 /* RoundedRectangle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoundedRectangle+Extensions.swift"; sourceTree = "<group>"; };
 		ED100D952A0A54C30006B857 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		ED100D972A0A68C80006B857 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				ED100D952A0A54C30006B857 /* ViewState.swift */,
+				ED100D972A0A68C80006B857 /* CacheService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				ED100D6D2A03ECD50006B857 /* SensorCellView.swift in Sources */,
 				ED100D8D2A09925E0006B857 /* SensorDetailsActionCreator.swift in Sources */,
+				ED100D982A0A68C80006B857 /* CacheService.swift in Sources */,
 				ED100D962A0A54C30006B857 /* ViewState.swift in Sources */,
 				ED100D932A0A53AC0006B857 /* RoundedRectangle+Extensions.swift in Sources */,
 				ED100D5C2A03E7830006B857 /* ContentView.swift in Sources */,
